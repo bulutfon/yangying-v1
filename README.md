@@ -33,3 +33,4 @@
   * Bu işi yapmadan önce basit bir şekilde bir JS kütüphanesi yapılması gerekiyor. Verileri AJAX ile alıp JSON objectlere cevirecek
   * Şimdi bizim ilk önce HTML5, CSS3, JS için SPA yapabileceğimiz bir framework belirlemiz gerekiyor. MVC olabilir.
   * Uc layout olmali desktop, tablet mobile
+  * JS-SDK
