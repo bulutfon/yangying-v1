@@ -18,13 +18,14 @@
   * HTML5
   * CSS3
   * AngularJS
-  * jQuery
+  * jQuery (!)
   * HAML
   * Sass
   * Bootstrap
 
 ## Product Environment  
   * Electron
+  * Ionic
 
 ## Request List
   * Pür HTML5, CSS3 ve JS olmalı. Yani PHP, Ruby gibi server side bir sey kullanmamamız gerekiyor.

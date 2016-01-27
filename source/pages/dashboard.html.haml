@@ -1,0 +1,173 @@
+-@title= 'Dashboard - Bulutfon MVP | yangying'
+-@page_classes= 'page-dashboard'
+
+.page-dashboard-layout{'data-ng-controller':'DashboardCtrl'}
+  %nav.navbar.navbar-default.navbar-fixed-top
+    .container-fluid
+      .navbar-header
+        %button.navbar-toggle.collapsed{'aria-controls':'navbar', 'aria-expanded':'false', 'data-target':'#navbar', 'data-toggle':'collapse', type:'button'}
+          %span.sr-only Toggle navigation
+          %i.fa.fa-bars.text-muted
+        =link_to '#', class:'navbar-brand' do
+          %i.fa.fa-cloud.fa-2x.fa-fw.fa-middle
+          %strong.sidebar-sm-hide
+            Bulutfon
+      #navbar.navbar-collapse.collapse
+        %ul.nav.navbar-nav.navbar-right
+          %li
+            =link_to '#' do
+              %i.fa.fa-language.fa-fw
+              ENGLISH
+          %li
+            =link_to '#' do
+              %i.fa.fa-user.fa-fw
+              JOHN DOE
+          %li
+            =link_to '#', 'data-ui-sref': 'pages.login' do
+              %i.fa.fa-power-off.fa-fw
+              %span.visible-xs-inline
+                SIGN OUT
+        .navbar-form.navbar-left
+          =link_to 'javascript:;', class:'btn btn-link visible-lg-inline', 'data-collapse-sidebar':'' do
+            %i.fa.fa-bars
+            %span.sr-only Toggle sidebar
+          %i.fa.fa-chevron-left
+          %strong
+            DASHBOARD
+  .container-fluid
+    .row
+      .sidebar
+        %h5.sidebar-title.sidebar-sm-hide
+          Pages
+        %ul.nav.nav-sidebar
+          %li.active
+            =link_to '#', title:'Dashboard' do
+              %i.fa.fa-dashboard.fa-2x.fa-fw.fa-middle
+              %span.sidebar-sm-hide
+                Dashboard
+          %li
+            =link_to 'javascript:;', 'data-ui-sref': 'pages.login', title:'Login' do
+              %i.fa.fa-lock.fa-2x.fa-fw.fa-middle
+              %span.sidebar-sm-hide
+                Login
+          %li
+            =link_to '#', title:'Fax' do
+              %i.fa.fa-fax.fa-2x.fa-fw.fa-middle
+              %span.sidebar-sm-hide
+                Fax
+              %small.badge.badge-danger.badge-pos.pull-right.mt-5
+                4
+          %li
+            =link_to '#', title:'Invoice' do
+              %i.fa.fa-file.fa-2x.fa-fw.fa-middle
+              %span.sidebar-sm-hide
+                Invoice
+              %small.badge.badge-danger.badge-pos.pull-right.mt-5
+                7
+        %h5.sidebar-title.sidebar-sm-hide
+          Components
+        %ul.nav.nav-sidebar
+          %li
+            =link_to '#', title:'Form' do
+              %i.fa.fa-pencil-square-o.fa-2x.fa-fw.fa-middle
+              %span.sidebar-sm-hide
+                Form
+          %li.dropdown
+            =link_to 'javascript:;', class:'dropdown-toggle', 'data-toggle':'dropdown', title:'Menu Level' do
+              %i.fa.fa-plus-circle.fa-2x.fa-fw.fa-middle
+              %span.sidebar-sm-hide
+                Menu Level
+            %ul.list-unstyled.js-dropdown-menu
+              -5.times do
+                %li
+                  =link_to '#' do
+                    %i.fa.fa-caret-right
+                    =lorem.words 2
+          %li
+            =link_to 'javascript:;', title:'Datatable' do
+              %i.fa.fa-database.fa-2x.fa-fw.fa-middle
+              %span.sidebar-sm-hide
+                Datatable
+      .main
+        .main-border
+          .row
+            .col-xs-12.col-sm-4
+              .panel.panel-border-green.text-center
+                .panel-body.mb-10
+                  %h4
+                    643.50 TL
+                .panel-title.mb-10
+                  %strong
+                    Mevcut Kontor
+              .panel.panel-border-blue.text-center
+                .panel-body.mb-10
+                  %h4
+                    970 Adet
+                .panel-title.mb-10
+                  %strong
+                    Mevcut SMS
+              %hr
+              %ul.nav.nav-tabs{role:'tablist'}
+                %li.active{role:'presentation'}
+                  %a{href:'javascript:;', 'aria-controls':'online', 'data-toggle':'tab', 'data-target':'#online', role:'tab'}
+                    %i.fa.fa-info-circle
+                    Online
+                %li{role:'presentation'}
+                  %a{href:'javascript:;', 'aria-controls':'help', 'data-toggle':'tab', 'data-target':'#help', role:'tab'}
+                    %i.fa.fa-life-ring
+                    Help
+              .tab-content
+                #online.tab-pane.active{role:'tabpanel'}
+                  %ul.list-unstyled.list-online
+                    -3.times do
+                      %li.online
+                        =image_tag (lorem.image('50x50')), class:'img-circle'
+                        %strong
+                          =lorem.name
+                    -3.times do
+                      %li.offline
+                        =image_tag (lorem.image('50x50')), class:'img-circle'
+                        %strong
+                          =lorem.name
+                #help.tab-pane{role:'tabpanel'}
+                  =lorem.paragraphs 3
+            .col-xs-12.col-sm-8
+              .panel.panel-border-gray
+                .panel-heading
+                  %h3.panel-title
+                    %i.fa.fa-phone-square.fa-2x.fa-middle.fa-fw
+                    Arama Kayitlari
+                    =link_to '#', class:'btn pull-right' do
+                      %i.fa.fa-ellipsis-h.fa-2x
+                .panel-body
+                  .table-responsive
+                    %table.table.table-bordered
+                      %thead
+                        %tr
+                          -6.times do
+                            %th
+                              =lorem.words 2
+                      %tbody
+                        -10.times do
+                          %tr
+                            -6.times do
+                              %td
+                                =lorem.words 2
+                  %nav
+                    %ul.pagination
+                      %li
+                        %a{'aria-label':'Previous', href:'#'}
+                          %span{'aria-hidden':'true'} &laquo;
+                      %li.active
+                        %a{href:'#'} 1
+                      %li
+                        %a{href:'#'} 2
+                      %li
+                        %a{href:'#'} 3
+                      %li
+                        %a{href:'#'} 4
+                      %li
+                        %a{href:'#'} 5
+                      %li
+                        %a{'aria-label':'Next', href:'#'}
+                          %span{'aria-hidden':'true'} &raquo;
