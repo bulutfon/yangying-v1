@@ -18,15 +18,24 @@ angular.module('yangyingApp')
 				var	width = $window.width();
 
 				var collapse = function() {
-					if (width < 569) {
-						app.removeClass('sidebar-sm');
-						dropdownMenu.removeClass('dropdown-menu');
-					} else if (width < 769){
+
+					width = $window.width();
+
+					if (width < 992) {
 						app.addClass('sidebar-sm');
-						dropdownMenu.addClass('dropdown-menu');
 					} else {
-						app.removeClass('sidebar-sm');
+						app.removeClass('sidebar-sm sidebar-xs');
+					}
+
+					if (width < 768) {
+						app.removeClass('sidebar-sm').addClass('sidebar-xs');
+						dropdownMenu.addClass('dropdown-menu');
+					} else if (width > 992){
+						app.removeClass('sidebar-sm sidebar-xs');
 						dropdownMenu.removeClass('dropdown-menu');
+					} else {
+						app.removeClass('sidebar-xs').addClass('sidebar-sm');
+						dropdownMenu.addClass('dropdown-menu');
 					}
 				};
 

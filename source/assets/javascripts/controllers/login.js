@@ -2,16 +2,14 @@
 
 /**
  * @ngdoc function
- * @name yangyingApp.controller:TableCtrl
+ * @name yangyingApp.controller:LoginCtrl
  * @description
- * # TableCtrl
+ * # LoginCtrl
  * Controller of the yangyingApp
  */
 angular.module('yangyingApp')
-	.controller('TableCtrl', function ($scope) {
+	.controller('LoginCtrl', function ($scope) {
 		$scope.main = {
-			title: 'Datatable'
+			title: 'Login Page'
 		};
 	});
-
-

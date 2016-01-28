@@ -13,6 +13,47 @@
           %strong.sidebar-sm-hide
             Bulutfon
       #navbar.navbar-collapse.collapse
+        %ul.nav.navbar-nav.visible-xs
+          %li.active
+            =link_to '#', title:'Dashboard' do
+              %i.fa.fa-dashboard.fa-fw
+              Dashboard
+          %li
+            =link_to 'javascript:;', 'data-ui-sref': 'pages.login', title:'Login' do
+              %i.fa.fa-lock.fa-fw
+              Login
+          %li
+            =link_to '#', title:'Fax' do
+              %i.fa.fa-fax.fa-fw
+              Fax
+              %small.badge.badge-danger.pull-right
+                4
+          %li
+            =link_to '#', title:'Invoice' do
+              %i.fa.fa-file.fa-fw
+              Invoice
+              %small.badge.badge-danger.pull-right
+                7
+          %li
+            =link_to '#', title:'Form' do
+              %i.fa.fa-pencil-square-o.fa-fw
+              Form
+          %li.dropdown
+            =link_to 'javascript:;', class:'dropdown-toggle', 'data-toggle':'dropdown', title:'Menu Level' do
+              %i.fa.fa-plus-circle.fa-fw
+              Menu Level
+            %ul.list-unstyled.js-dropdown-menu
+              -5.times do
+                %li
+                  =link_to '#' do
+                    %i.fa.fa-caret-right
+                    =lorem.words 2
+          %li
+            =link_to 'javascript:;', title:'Datatable' do
+              %i.fa.fa-database.fa-fw
+              Datatable
+          %li
+            %hr
         %ul.nav.navbar-nav.navbar-right
           %li
             =link_to '#' do

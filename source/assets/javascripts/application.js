@@ -51,14 +51,6 @@ angular
 				templateUrl: 'pages/login.html'
 			})
 
-			//Table
-			//Table uses TableCtrl
-			.state('pages.table', {
-				url: '/table',
-				controller: 'TableCtrl',
-				templateUrl: 'pages/table.html'
-			})
-
 	}]);
 
 

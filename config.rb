@@ -41,7 +41,7 @@ configure :development do
   activate :automatic_image_sizes
 
   # Reload the browser automatically whenever files change
-  activate :livereload,  :no_swf => true
+  activate :livereload
 
   # Assets Pipeline Sets
   set :haml, {ugly: false, format: :html5}
