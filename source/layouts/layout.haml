@@ -2,28 +2,36 @@
 %html{'data-ng-app':'yangyingApp', 'data-ng-controller':'MainCtrl'}
   %head
 
-    %meta{charset: 'utf-8'}
-    %meta{content: 'ie=edge', 'http-equiv':'x-ua-compatible'}
+    //Global stuff
+    %meta{charset:'utf-8'}
+    %meta{content:'IE=edge', 'http-equiv':'X-UA-Compatible'}
+    %meta{content:'width=device-width, initial-scale=1', name:'viewport'}
 
     %title
       =@title
 
     %meta{content: '', name: 'description'}
-    %meta{content: 'width=device-width, initial-scale=1', name: 'viewport'}
 
     //Stylesheets
     =stylesheet_link_tag  'application',
                           '//fonts.googleapis.com/css?family=Roboto:300,400,500,700'
-
     //FontAwesome CDN
     %link{href: '//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css', rel: 'stylesheet', integrity: 'sha256-3dkvEK0WLHRJ7/Csr0BZjAWxERc5WH7bdeUya2aXxdU= sha512-+L4yy6FRcDGbXJ9mPG8MT/3UCDzwR9gPeyFNMCtInsol++5m3bk2bXWKdZjvybmohrAsn3Ua5x8gfLnbE1YkOg==', crossorigin: 'anonymous'}
 
-    //Favicons
-    %link{rel:'icon', href:'favicon.ico', type:'image/x-icon'}
+    //Favicon
+    %link{href:'/favicon.png', rel:'icon'}
+    /[if IE]
+      <link rel="shortcut icon" href="/favicon.ico">
+
+    /[if lt IE 9]
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 
   %body{class: @page_classes, id:'yangying'}
 
     = partial 'partials/header'
+
+    = partial 'partials/sidebar'
 
     = yield
 
