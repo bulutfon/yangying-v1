@@ -18,7 +18,7 @@
   * HTML5
   * CSS3
   * AngularJS
-  * jQuery(!)
+  * jQuery (!)
   * HAML
   * Sass
   * Bootstrap
