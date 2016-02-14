@@ -9,7 +9,8 @@ page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
 
-page 'pages/*', layout: false
+page 'pages/app.html', layout: false
+page 'pages/dashboard.html', layout: false
 
 # With alternative layout
 # page "/path/to/file.html", layout: :otherlayout
@@ -41,7 +42,7 @@ configure :development do
   activate :automatic_image_sizes
 
   # Reload the browser automatically whenever files change
-  activate :livereload
+  activate :livereload, no_swf: true
 
   # Assets Pipeline Sets
   set :haml, {ugly: false, format: :html5}

@@ -52,14 +52,43 @@
           %li
             %hr
         %ul.nav.navbar-nav.navbar-right
-          %li
-            =link_to '#' do
+          %li.dropdown
+            =link_to 'javascript:;', class:'dropdown-toggle', 'data-toggle':'dropdown', title:'Menu Level' do
               %i.fa.fa-language.fa-fw
               ENGLISH
+            %ul.list-unstyled.dropdown-menu
+              %li
+                =link_to '#' do
+                  %i.fa.fa-arrow-right.fa-fw
+                  CHINESE
+              %li
+                =link_to '#' do
+                  %i.fa.fa-arrow-right.fa-fw
+                  TURKISH
           %li
-            =link_to '#' do
+            =link_to 'javascript:;', class:'dropdown-toggle', 'data-toggle':'dropdown', title:'Menu Level' do
               %i.fa.fa-user.fa-fw
               JOHN DOE
+            %ul.list-unstyled.dropdown-menu
+              %li
+                =link_to '#' do
+                  %i.fa.fa-user
+                  Profile
+              %li
+                =link_to '#' do
+                  %i.fa.fa-check
+                  Tasks
+                  %span.label.label-danger.pull-right
+                    new
+              %li
+                =link_to '#' do
+                  %i.fa.fa-gear
+                  Settings
+              %li.divider
+              %li
+                =link_to '#' do
+                  %i.fa.fa-sign-out
+                  Logout
           %li
             =link_to '#', 'data-ui-sref': 'pages.login' do
               %i.fa.fa-power-off.fa-fw
