@@ -48,6 +48,7 @@
 
 .sidebar
   display: none
+  width: percentage((2 / $grid-columns))
 
 @media (min-width: $screen-sm-min)
   .sidebar
@@ -57,7 +58,7 @@
     left: 0
     z-index: 1000
     display: block
-    padding: 20px
+    padding: 20px 10px
     //overflow-x: hidden //## remove for dropdown-menu
     //overflow-y: auto
     background-color: $sidebar-bg
@@ -65,9 +66,9 @@
 // Sidebar navigation
 //ul
 .nav-sidebar
-  margin-right: -20px
+  margin-right: -10px
   margin-bottom: 20px
-  margin-left: -20px
+  margin-left: -10px
   & > li
     &.active > a
       color: $sidebar-active-color
@@ -86,9 +87,6 @@
       &:focus
         color: $sidebar-hover-color
         background-color: transparent
-
-.sidebar
-  width: percentage((2 / $grid-columns))
 
 .sidebar-sm
   & .navbar-header
